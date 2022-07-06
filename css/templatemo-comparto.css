@@ -48,12 +48,12 @@ a {
 a:hover { text-decoration: none; }
 button:focus { outline: none; }
 p { 
-  color: #666;
+  color: rgb(0, 0, 0);
   line-height: 1.7; 
   margin-bottom: 35px;
 }
 
-h1, h2, h3, h4, h5, h6 { color: #333; }
+h1, h2, h3, h4, h5, h6 { color: rgb(72, 88, 174); }
 
 .container-fluid {
     max-width: 1210px;
@@ -80,6 +80,54 @@ h1, h2, h3, h4, h5, h6 { color: #333; }
 .tm-text-white { color: #fff; }
 .text-center { text-align: center; }
 .tm-title-color { color: #6f6f6f; } /* Nav background */
+
+.tm-bg-img {background-image: url("C:/Users/Administrator/Desktop/Stage/4th stage/site template/templatemo_544_comparto/templatemo_544_comparto/img/header/Design.png");}
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 50%;
+  left: 16px;
+}
+.bottom-center {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 50%;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .tm-site-header {
     display: flex;
@@ -194,16 +242,18 @@ h1, h2, h3, h4, h5, h6 { color: #333; }
 
 .tm-btn {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 1% 5%;
   font-size: 1.1rem;
   border: none;
   background-color: #CC9999;
-  color: white;
+  color: rgb(55, 52, 94);
+  font-weight: bold;
 }
 
 .tm-btn:hover {
   color: white;
   background-color: #875959;
+  font-weight: bold;
 }
 
 .tm-social-row { padding: 70px; }
@@ -216,7 +266,7 @@ h1, h2, h3, h4, h5, h6 { color: #333; }
   text-align: center;
 }
 
-.tm-icon-inner > a > * { color: white; }
+.tm-icon-inner > a > * { font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); }
 .tm-icon-inner h3 { line-height: 1.7; }
 
 .tm-section-2-l {
@@ -504,7 +554,7 @@ figure.effect-bubba:hover p {
   width:100%;
 }
 
-.contact-form-outer { width: 37%; }
+.contact-form-outer { width: 100%;  }
 .contact-info-outer { width: 28%; }
 
 .contact-form-outer {
@@ -547,7 +597,7 @@ figure.effect-bubba:hover p {
 }
 
 .ml-auto {
-  margin-left: auto;
+  margin-left: 40%;
   display: block;
 }
 
