@@ -4,31 +4,33 @@
 
 .col-gray { color: #666; }
 
-
-body{
-
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
-    
-    font-weight: 100;
-    
-    font-style: normal;
-}
 *{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
 }
+:root {
+  --main-color-:#ff702a;
+  --text-color:#fff;
+  --bg-color:#1e1c2a;
+  --big-font:5rem;
 
+
+}
 /*---------------------header-----------------------------*/
 
 .site-header {
     gap: 50px;
     display: flex;
     flex-direction: row;
-    margin: 0 50px 0 50px;
-    height: 140px;
+    height: 100px;
     align-items: center;
     justify-content:space-around;
+    background-color: #fff;
 
 }
 
@@ -40,7 +42,7 @@ body{
   .nav ul li {
     list-style: none;
     display: inline-flex;
-    margin: 40px 40px 40px 40px ;
+    margin: 40px 30px 40px 30px ;
     text-decoration: none;
   
   }
@@ -68,10 +70,15 @@ body{
     .nav {
       width: 100%;
     }
-  
+
     .site-name-container {
       margin-right: 0;
       padding:50px;
+    }
+  }
+  @media  (max-width : 800px ){
+    .img-responsive{
+      width: 50%;
     }
   }
   
@@ -92,9 +99,8 @@ body{
   .btn {
     display: inline-block;
     padding: 2% 5%;
-    font-size: 20px;
     border: none;
-    background-color: #dfc6c6;
+    background-color: #ffdddd;
     color: rgb(54, 54, 54);
     font-weight: bold;
   }
@@ -105,36 +111,41 @@ body{
   }
 
 
-/*---------------------------body----------------------------*/
+/*---------------------------home----------------------------*/
 .row{
 	display: flex;
 	flex-wrap: wrap;
+  height: 750px;
 }
 .about-row,
 .services-row {
   flex-direction: column;
 }
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-  }
+
 .text-body1 {
-    padding: 5%;
-    width: 50%;
+    padding: 12% 0% 0 0%;
+    width: 40%;
   }
 .text-body1 h2 {
     font-size: 70px;
-    font-weight: 700;
+    font-weight: 750;
 }
 .text-body1 a {
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
 }
 .text-body1 p {
   margin: 10% 0 10% 0;
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: none;
 }
+.img-responsive{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    padding: 10 0 0 0;
+  }
+
 /* -------------------foorter---------------------*/
 ul{
 	list-style: none;
@@ -213,7 +224,18 @@ ul{
 }
 }
 
+.container {
+  position: relative;
+  text-align:left;
+  color: white;
+}
 
+.top-left {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
 
-
-
+.limits{
+  margin: 0 60% 0 0;
+}
