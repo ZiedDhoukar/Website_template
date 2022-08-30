@@ -9,63 +9,6 @@
   text-decoration: none;
   color: #484F5B  ;
 }
-/*--------Header---------------------*/
-header{
-  padding-left: 5.55555555555556%;
-  display: inline-flex;
-  height: 2.23964165733483%;
-  align-items: center;
-  background-color: #fff;
-  font-size: 21px;
-}
-.LOGO  {
-  width: 20%;
-}
-
-nav ul li {
-  justify-content:space-around;
-  display: inline-flex;
-  align-items: center;
-  margin: 35px;
-}
-nav ul li button {
-padding: 10px;
-border-radius: 10%;
-}
-nav ul li a:hover {
-  color: white;
-  background-color: #e6c8c3;
-  border-radius: 10%;
-}
-.barbtn i {
-  color: #484F5B ;
-  cursor: pointer;
-  display: none;
-}
-#bar {
-  display: none;
-}
-@media (max-width : 952px) {
-  nav ul li a {
-    font-size: 16px;
-  }  
-}
-@media (max-width: 858px) {
-  .checkbtn {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    text-align: center;
-  }
-
-nav ul li {
-  display: block;
-}
-nav ul li a {
-font-size: 20px;
-}
-}
 
 /*-----main-------*/
 
@@ -77,114 +20,198 @@ section {
   position: relative;
   text-align:left;
 }
+article{
+  justify-content: space-evenly;
+}
+article * {
+  margin: 5%;
+}
+
+
 h1 {
-  font-size: 75px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  font-size: 5.5vw;
+}
+#b4 h1 {
+  font-size: 4.5vw;
 }
 h2 {
   text-align: center;
 }
 p {
-  font-size: 21px;
-  margin-bottom: 30px;
-  margin-top: 10px;
-
+  font-size: 1.6vw;
+} 
+#b2 p,#b1 p {
+  margin-right: 15%;
 }
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+#b3 p {
+  padding: 1% 0;
+  margin: -5%;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+/*--------Header---------------------*/
+nav {
+  background: #ffffff;
+  height: 140px;
+  width: 100%;
+  padding: 2% 5%;
 }
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
+nav ul {
   float: right;
-  font-size: 28px;
-  font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #484F5B;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active, a:hover {
+  background: #e6c8c3;
+  transition: 0.5s;
+  color: white;
+}
+.checkbtn {
+  font-size: 2.083333333333333vw  ;
+  color: #484F5B;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  display: none;
   cursor: pointer;
+} 
+#check {
+  display: none;
 }
+@media (max-width :1080px) {
+  .LOGO {
+      font-size: -10%;
+      padding-left: -30px;
+  }
+  nav ul li a {
+      font-size: 16px;
+  }
+}
+@media (max-width :900px) {
+  .checkbtn {
+      display: block;
+  }
+  ul {
+      position:fixed;
+      width: 100%;
+      height: 100vh;
+      background: #bebebe;
+      top : 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li {
+      display: block;
+      float: none;
 
+  }
+  nav ul li a {
+      font-size: 20px;
+      margin: 50px 0 ;
+      line-height: 30px;
+  }
+  a:hover,a.active {
+      color: #e6c8c3;
+      background: none;
+
+  }
+  #check:checked ~ ul {
+      left: 0;
+      position: relative;
+}
+  #check:checked ~ nav {
+    height: +462px;
+}
+}
 /*----------btn----------*/
-button {
+button, .button {
   padding: 2% 5%;
   border: none;
   background-color: #e6c8c3;
   font-weight: bold;
   font-size: 21px;
+  border-radius: 2px;
+  margin: 5%;
 }
 button:hover {
   color: white;
   background-color: #875959;
+  transition: 00.3s;
 }
 /*----------b1------------*/
 
 #b1 {
-  max-height: 12.06207006878899% ;
   display: flex;
   flex-direction: row;
+    background-image: url('Design-b1.png');
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: cover;
 }
 #b1 div {
-  width: 50%;
+width: 50%;
 }
-#b1 div article {
-  padding: 0 60px 0 100px ;
+@media (max-width : 700px) {
+  #b1 {
+    flex-direction: column-reverse;
+    background-image: none;
+    text-align: center;
+  }
+  #b1 div {
+    width: 100%;
+    }
 }
-
 /*--------b2-----------*/
 
 #b2{
-  max-height: 12.90993441049432% ;
-}
+  background-color: #e5e3e1;
+  }
+
 #b2 div article {
-  padding: 0 0 0 80px ;
   position: absolute;
-  top: 20%;
+  top: 12%;
   width: 50%;
 }
+
 /*-------------b3---------*/
 #b3 {
-  height: 477px ;
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content:center;
+  align-items: baseline;
   text-align:center;
+  margin: 7%;
+}
+@media (max-width : 700px) {
+  #b3 {
+    flex-direction: column;
+    align-items:center;
+    
+  }
 }
 /*----------b4-----------*/
 #b4 {
-  height: 636px ;
+
   display: flex;
   flex-direction:row;
   justify-content:space-around;
-
+  background-image: url('Design-b4.png');
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-size: 100% 100%;
+  padding: 5% 0;
 }
 #b4 div {
-  width: 60%;
+  width: 50%;
 }
 #b4 div article{
   padding: 0 70px 0 80px ;
@@ -192,81 +219,110 @@ button:hover {
 #b4 div img {
 padding-right: 36px;
 }
-
+@media (max-width:700px) {
+#b4{
+  flex-direction: column ;
+  text-align: center;
+}
+#b4 div {
+  width: 100%;
+}
+}
 /*------------b5------------*/
 
-#b5 {
-  height: 608px;
+
+#b5 div{
+  align-items: center;
 }
 #b5 div article {
-  padding: 100px 80px 0 100px ;
   position: absolute;
   top: 0%;
   right: 0%;
   width: 50%;
 }
-#b5 div article img {
+.image{
   position: absolute;
-  top : 0%;
-  right : 0%;
-  padding: 125px 60% 0 100px ;
+  margin-right: 23%;
+  margin-top: 2%;
+  top : 0;
+  right : 0;
+  width:25%;}
+.image2{
+  height: 50%;
+  }
+  @media (max-width : 700px) {
+    #b5 div article {
+      position: relative;
+    }
+    .image {
+      position: relative;
+    }
+  }
+/*------%-b6----------*/
+#b6 {
+  text-align: center;
+  align-content: space-between;
+  background-image: url('Design-b6.png');
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-size: 100% 100%;
+  max-width: 100%;
 }
-/*-------b6----------*/
 #b6-box{
-  padding: 0 100px 0 100px;
-  height: 957px;
   display: flex;
   flex-direction:row;
-  justify-content:space-around;
-  align-items: center;
-}
-#b6-titre {
-  text-align: center;
-  padding-top: 100px ;
-}
-#b6-titre p {
-  text-align: center;
-  padding-top: 50px ;
-}
-#b6-box div div {
-  align-items: center ;
-  width: 351px;
-  height: 535px;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  box-shadow: 13px 10px 29px 0px #e0e0e0;
 
 }
-.text {
-  margin:10%;
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+#b6-box div {
+  margin: 3% 3%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 13px 10px 29px 0px #e0e0e0;
+  }
+@media (max-width:700px) {
+  #b6-box {
+    flex-direction: column;
+    margin: -5% 0;
+  }  
+  #b6-box div {
+    margin: 5% 15%;
+    width: 70%;
+    padding: -5%;
+  }
 }
 /*--------------b7-------------------------*/
 
 #b7 {
-  height: 735px;
+  background-color: #e5ccc6;
 }
 #b7 div{
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
   align-items: center;
-  padding-top: 5%;
 }
 #b7 div div {
   width: 50%;
 }
 .yt {
   box-shadow: 13px 10px 29px 0px #525252;
+  margin: 10% 0;
+  width: 600px;
+  height: 423px;
+  max-width: 100%;
+  max-height: 100%;
+  
 }
 article a i {
-  padding: 1.25%;
-	display: inline-block;
-	height: 40px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding: 1.7%;
+  height: 40px;
 	width: 40px;
   background-color: #484F5B;
-  justify-content:space-around;
-	text-align: center;
-  align-items: center;
 	border-radius: 5%;
 	color: #ffffff;
   transition: all 0.5s ease;
@@ -275,14 +331,26 @@ article a i {
   background-color: rgb(255, 255, 255);
 	color: #484F5B;
 }
-
+@media (max-width:700px) {
+  #b7 div{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #b7 div div {
+    width: 100%;
+    text-align: center;
+    padding: 0 10%;
+  }
+}
 /*--------------b8-----------------------*/
 #b8 {
-  height: 826px;
   text-align: center;
   overflow: hidden;
   margin: auto;
-
+  background-image: url('Design-b8.png');
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-size: 100% 100%;
 }
 form div input, form div textarea {
   justify-content:space-around;
@@ -308,9 +376,7 @@ padding: 0.5% 1.5%;
 
 /* -------------------foorter---------------------*/
 
-ul{
-	list-style: none;
-}
+
 .row-footer{
 	display: flex;
 	flex-wrap: wrap;
@@ -318,7 +384,6 @@ ul{
 .footer{
 	background-color: #52555f;
     padding: 70px 70px 70px 70px;
-  height: 300px;
 }
 .footer-logo{
 	margin-bottom: 10px;
@@ -389,17 +454,4 @@ ul{
   .footer-col{
     width: 100%;
 }
-}
-/*-------booking-------*/
-#book {
-  text-align: center;
-  overflow: hidden;
-  margin: auto;}
-
-#program {
-  display: flex;
-  flex-direction: row ;
-  justify-items: center;
-  align-items: center;
-  margin: auto;
 }
