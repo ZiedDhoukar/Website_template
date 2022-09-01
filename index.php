@@ -57,7 +57,7 @@
                     <article>
                         <h1>Pregnant<br>Women Program</h1>
                         <p>Duis aute irure dolor in repregenrerit in voliptate velit esse cillum dolore eu fugiat nulla paroatur. Excepteur sint occarcat cupidatat</p>      
-                        <button>JOIN US NOW</button>
+                        <a href="Booking.php" id="button"><button>JOIN US NOW</button></a>
                     </article>
                 </div>
         </section>
